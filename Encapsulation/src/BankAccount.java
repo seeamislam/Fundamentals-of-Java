@@ -2,10 +2,10 @@ public class BankAccount {
     // the attributes for each BankAccount (object) will have to be private so it is not accessible by other classes
 
     private int account_number;
-    private int account_balance; // private variables because you want to keep this information concealed.
+    private int account_balance; // private variables because you want to keep this information concealed to this class
     // to use these values, we have getter and setter public methods inside this class
 
-    //contructor to build instances
+    //constructor to build instances
 
     public BankAccount(int account_number, int account_balance) {
         this.account_number = account_number; // account number is saved to this.account_number
@@ -13,7 +13,8 @@ public class BankAccount {
         System.out.println("You created account " + this.account_number + ".");
     }
 
-    // now, we can build methods which help the objects (bank accounts) interact
+    // now, we can build methods which help the objects (bank accounts) interact. because these methods below are public, they are the only
+    // way that other classes have access to account_number and account_balance
 
     public void deposit(int addMoney) { // these methods are public (access modifiers) so any class can use them
         if (addMoney < 0) { // check that deposited money is not negative
